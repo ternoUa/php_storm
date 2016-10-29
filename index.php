@@ -13,6 +13,7 @@ if (isset($_GET['month'])) {
 } else {
   $month = 0;
 }
+
 if (isset($_GET['ln'])) {
   $ln = $_GET['ln'];
 } else {
@@ -26,9 +27,11 @@ echo '
     <option value="6" ' . (($month == 6) ? 'selected' : '') . '>june</option>
     <option value="7" ' . (($month == 7) ? 'selected' : '') . '>july</option>
     <option value="8" ' . (($month == 8) ? 'selected' : '') . '>august</option>
-  </select>
-  <br/>
-  <label><input type="radio" name="ln" value="ua" ' . (($ln === 'ua') ? 'checked' : '') . '/>Ukraine</label>
+  </select><br/>
+  
+  <label>
+    <input type="radio" name="ln" value="ua" ' . (($ln === 'ua') ? 'checked' : '') . '/>Ukraine
+  </label>
   <br/>
   <label><input type="radio" name="ln" value="en" ' . (($ln === 'en') ? 'checked' : '') . '/>English</label>
   <br/>
